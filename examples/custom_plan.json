@@ -1,0 +1,4 @@
+{"objective":"Qualify a lead and evaluate","steps":[
+{"key":"lead","agent":"sales","capability":"crm.lead.read","kind":"skill","risk":"READ"},
+{"key":"qualify","agent":"sales","capability":"crm.lead.qualify","kind":"skill","depends_on":["lead"],"risk":"WRITE"},
+{"key":"evaluate","agent":"supervisor","capability":"workflow.evaluate","kind":"evaluate","depends_on":["qualify"],"risk":"READ"}]}

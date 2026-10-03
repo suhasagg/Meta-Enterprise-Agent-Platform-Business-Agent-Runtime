@@ -1,0 +1,2 @@
+# Production Design
+Split into API/goal, planner, scheduler, runtime workers, specialist-agent workers, approval, reconciliation, registry, memory, MCP gateway, A2A gateway and audit exporter. Persist state before dispatch. Use SQL + outbox + Kafka/Pulsar. Workers claim with leases/fencing. External writes have scoped idempotency keys and UNKNOWN/reconciliation semantics. Network calls never occur inside DB transactions.
